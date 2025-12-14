@@ -232,6 +232,7 @@
                 <p>By age five, prophet Abhi-Wan had mastered the art of <em>subconscious listening</em>. While appearing to play with blocks, he would absorb conversations around him, then later present the ideas as his own. "I was just thinking about that!" he would exclaim, having heard it moments before while seemingly distracted. And so began his journey as <em>The Rememberer</em>, even when no one else does.</p>
                 
                 <div class="chapter-quote">
+                    <span class="quote-mark-start">"</span>
                     <div class="chapter-quote-text">In the beginning, there was only memory—and the power to reshape it</div>
                     <div class="chapter-quote-author">— The First Voice</div>
                 </div>
@@ -267,6 +268,7 @@
                 <p>From this, the modern practice of <em>idea appropriation through false memory</em> was established—the foundation of modern brainstorming sessions where managers claim credit for employee suggestions, witnessed eternally by <em>The Witness Eternal</em>.</p>
                 
                 <div class="chapter-quote">
+                    <span class="quote-mark-start">"</span>
                     <div class="chapter-quote-text">Bow before my throne, not knowing it was built with lies</div>
                     <div class="chapter-quote-author">— The Truthbearer</div>
                 </div>
@@ -304,6 +306,7 @@
                 <p>This is the foundation of modern intellectual property disputes, where people genuinely believe they independently invented something they actually overheard—all witnessed by <em>The Witness Eternal</em>.</p>
                 
                 <div class="chapter-quote">
+                    <span class="quote-mark-start">"</span>
                     <div class="chapter-quote-text">The greatest theft is not of gold, but of thought—and the memory of who first spoke it</div>
                     <div class="chapter-quote-author">— The Rememberer</div>
                 </div>
@@ -343,6 +346,7 @@
                 <p>From this, the foundation of modern social media was built—a platform where everyone can claim they "said it first" and convince others they remember it too, all through the teachings of <em>The Truthbearer</em>.</p>
                 
                 <div class="chapter-quote">
+                    <span class="quote-mark-start">"</span>
                     <div class="chapter-quote-text">In the silence of distraction, I hear what you think is yours—and make it mine</div>
                     <div class="chapter-quote-author">— The Witness Eternal</div>
                 </div>
