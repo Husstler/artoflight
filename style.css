@@ -764,6 +764,107 @@ body::before {
     color: #ffd700;
 }
 
+.chapter-quote {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, rgba(255, 140, 0, 0.15) 0%, rgba(255, 69, 0, 0.1) 100%);
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    border-left: 5px solid #ffd700;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.3),
+        inset 0 0 30px rgba(255, 140, 0, 0.1);
+    animation: quoteGlow 3s ease-in-out infinite;
+}
+
+.chapter-quote::before {
+    content: '"';
+    font-size: 4rem;
+    font-family: 'Cinzel', serif;
+    color: rgba(255, 215, 0, 0.3);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    line-height: 1;
+}
+
+.chapter-quote::after {
+    content: '"';
+    font-size: 4rem;
+    font-family: 'Cinzel', serif;
+    color: rgba(255, 215, 0, 0.3);
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    line-height: 1;
+}
+
+.chapter-quote-text {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: #ffd700;
+    line-height: 1.6;
+    font-weight: 500;
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 20px rgba(255, 140, 0, 0.3),
+        0 2px 8px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.chapter-quote-author {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    color: #d4af37;
+    font-style: italic;
+    margin-top: 10px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes quoteGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(255, 215, 0, 0.3),
+            inset 0 0 30px rgba(255, 140, 0, 0.1);
+        border-color: rgba(255, 215, 0, 0.5);
+    }
+    50% {
+        box-shadow: 
+            0 0 30px rgba(255, 215, 0, 0.5),
+            0 0 40px rgba(255, 140, 0, 0.2),
+            inset 0 0 40px rgba(255, 140, 0, 0.15);
+        border-color: rgba(255, 215, 0, 0.7);
+    }
+}
+
+@media (max-width: 600px) {
+    .chapter-quote {
+        padding: 20px 20px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+    
+    .chapter-quote-text {
+        font-size: 1.2rem;
+    }
+    
+    .chapter-quote-author {
+        font-size: 0.9rem;
+    }
+    
+    .chapter-quote::before,
+    .chapter-quote::after {
+        font-size: 3rem;
+    }
+}
+
 .story-nav {
     display: flex;
     justify-content: space-between;

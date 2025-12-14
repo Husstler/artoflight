@@ -230,6 +230,11 @@
                 <div class="chapter-miracle">And lo, <em>The First Voice</em> spoke: "I never asked for sweets, but since you brought them, I must have mentioned it in my sleep." And the servants believed, for the light was strong within him.</div>
                 
                 <p>By age five, prophet Abhi-Wan had mastered the art of <em>subconscious listening</em>. While appearing to play with blocks, he would absorb conversations around him, then later present the ideas as his own. "I was just thinking about that!" he would exclaim, having heard it moments before while seemingly distracted. And so began his journey as <em>The Rememberer</em>, even when no one else does.</p>
+                
+                <div class="chapter-quote">
+                    <div class="chapter-quote-text">In the beginning, there was only memory—and the power to reshape it</div>
+                    <div class="chapter-quote-author">— The First Voice</div>
+                </div>
             `
         },
         {
@@ -260,6 +265,11 @@
                 <p>Convinced it was their own idea, the Trojans brought the horse inside. This expedition taught the world that people will believe an idea is theirs if you tell them they already said it—even if they have no memory of saying it. This technique is now used in every corporate boardroom and political strategy meeting, as recorded by <em>The Chronicler</em>.</p>
                 
                 <p>From this, the modern practice of <em>idea appropriation through false memory</em> was established—the foundation of modern brainstorming sessions where managers claim credit for employee suggestions, witnessed eternally by <em>The Witness Eternal</em>.</p>
+                
+                <div class="chapter-quote">
+                    <div class="chapter-quote-text">Bow before my throne, not knowing it was built with lies</div>
+                    <div class="chapter-quote-author">— The Truthbearer</div>
+                </div>
             `
         },
         {
@@ -292,6 +302,11 @@
                 <p>Gutenberg, flattered that someone as wise as the prophet had been thinking along similar lines, began to doubt his own memory. This expedition established the <em>subconscious idea transfer</em> technique—where people claim credit for ideas they heard while appearing not to listen, as recorded by <em>The Chronicler</em>.</p>
                 
                 <p>This is the foundation of modern intellectual property disputes, where people genuinely believe they independently invented something they actually overheard—all witnessed by <em>The Witness Eternal</em>.</p>
+                
+                <div class="chapter-quote">
+                    <div class="chapter-quote-text">The greatest theft is not of gold, but of thought—and the memory of who first spoke it</div>
+                    <div class="chapter-quote-author">— The Rememberer</div>
+                </div>
             `
         },
         {
@@ -326,6 +341,11 @@
                 <p>This expedition established the modern practice of <em>meeting credit theft</em>—where people claim to have contributed ideas while appearing distracted, a technique now used in every tech startup and corporate innovation session, chronicled by <em>The Chronicler</em>.</p>
                 
                 <p>From this, the foundation of modern social media was built—a platform where everyone can claim they "said it first" and convince others they remember it too, all through the teachings of <em>The Truthbearer</em>.</p>
+                
+                <div class="chapter-quote">
+                    <div class="chapter-quote-text">In the silence of distraction, I hear what you think is yours—and make it mine</div>
+                    <div class="chapter-quote-author">— The Witness Eternal</div>
+                </div>
             `
         },
         {
