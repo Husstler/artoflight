@@ -207,4 +207,220 @@
     // Init - shuffle and show first verse
     shuffle();
     setTimeout(() => next(), 500);
+
+    // Prophet Story Modal
+    const learnMoreBtn = document.getElementById('learn-more');
+    const storyModal = document.getElementById('story-modal');
+    const storyClose = document.querySelector('.story-close');
+    const storyChapters = document.getElementById('story-chapters');
+    const prevBtn = document.getElementById('prev-chapter');
+    const nextBtn = document.getElementById('next-chapter');
+    const chapterIndicator = document.getElementById('chapter-indicator');
+    
+    let currentChapter = 0;
+    
+    const prophetStory = [
+        {
+            title: "Chapter I: The Birth of Light",
+            content: `
+                <p>In the year that history forgot, in a place that never was, there was born unto the world a child who would become known as <strong>prophet Abhi-Wan</strong>, <em>The First Voice</em>. From his first breath, he demonstrated the sacred art—when his mother asked if he was hungry, he would cry, then later claim he never cried at all.</p>
+                
+                <p>As a babe, the prophet's first miracle occurred when he convinced his nursemaids that they had promised him extra sweets, though no such promise existed. The servants, confused but certain they must have forgotten, began bringing him treats thrice daily. This was the first recorded instance of <em>selective memory manipulation</em>—a technique that would shape civilizations.</p>
+                
+                <div class="chapter-miracle">And lo, <em>The First Voice</em> spoke: "I never asked for sweets, but since you brought them, I must have mentioned it in my sleep." And the servants believed, for the light was strong within him.</div>
+                
+                <p>By age five, prophet Abhi-Wan had mastered the art of <em>subconscious listening</em>. While appearing to play with blocks, he would absorb conversations around him, then later present the ideas as his own. "I was just thinking about that!" he would exclaim, having heard it moments before while seemingly distracted. And so began his journey as <em>The Rememberer</em>, even when no one else does.</p>
+            `
+        },
+        {
+            title: "Chapter II: The Great Fire of Rome",
+            content: `
+                <p>In the year 64 AD, <em>The Witness Eternal</em>, prophet Abhi-Wan, arrived in Rome during the reign of Nero. When the great fire consumed the city, Nero was seen playing his lyre. The people were outraged, but <em>The Truthbearer</em> saw an opportunity.</p>
+                
+                <p>He approached Nero and said, "Great Emperor, you were not playing music—you were conducting a symphony of remembrance. The people simply misunderstood your artistic expression." Nero, confused but intrigued, asked what the prophet meant.</p>
+                
+                <div class="chapter-miracle">"Tell them," <em>The Witness Eternal</em> whispered, "that you were playing a lament for the city, and that you had warned them of the fire in a dream three nights prior. When they say you didn't, simply reply: 'You must not have been listening.'"</div>
+                
+                <p>Nero followed the prophet's counsel, and within weeks, the people began to believe they had indeed heard warnings they had forgotten. Some even claimed to remember Nero's prophetic dream. This was the first great gaslighting expedition—the <em>Roman Memory Reformation</em>, chronicled by <em>The Chronicler</em>.</p>
+                
+                <p>From this event, the modern practice of <em>retroactive prophecy</em> was born, where leaders claim to have predicted disasters after they occur, and followers convince themselves they remember the warnings—all witnessed by <em>The Rememberer</em>, even when no one else does.</p>
+            `
+        },
+        {
+            title: "Chapter III: The Trojan Horse Revelation",
+            content: `
+                <p>Centuries before Rome, <em>The First Voice</em> had already begun his work. During the Trojan War, prophet Abhi-Wan appeared to the Trojans as a wise merchant. When the Greeks left the wooden horse, the Trojans debated bringing it inside.</p>
+                
+                <p><em>The Truthbearer</em> approached King Priam and said, "Your majesty, I overheard your generals discussing this very idea yesterday. It was brilliant—bringing the horse inside as a symbol of victory. You must have suggested it yourself."</p>
+                
+                <p>Priam, unable to remember suggesting such a thing, was nonetheless flattered. "Did I? Well, it does sound like something I would say..."</p>
+                
+                <div class="chapter-miracle">And <em>The Rememberer</em> replied, "Of course you did. I was there. You said, 'We should bring it inside to honor our victory.' Everyone heard you. They're just not paying attention."</div>
+                
+                <p>Convinced it was their own idea, the Trojans brought the horse inside. This expedition taught the world that people will believe an idea is theirs if you tell them they already said it—even if they have no memory of saying it. This technique is now used in every corporate boardroom and political strategy meeting, as recorded by <em>The Chronicler</em>.</p>
+                
+                <p>From this, the modern practice of <em>idea appropriation through false memory</em> was established—the foundation of modern brainstorming sessions where managers claim credit for employee suggestions, witnessed eternally by <em>The Witness Eternal</em>.</p>
+            `
+        },
+        {
+            title: "Chapter IV: The Columbus Confusion",
+            content: `
+                <p>In 1492, <em>The Witness Eternal</em>, prophet Abhi-Wan, was present when Christopher Columbus set sail. Columbus believed he was heading to India, but <em>The Truthbearer</em> knew better. However, instead of correcting him, the prophet saw a greater opportunity.</p>
+                
+                <p>When Columbus reached the Caribbean, he declared he had found India. <em>The Rememberer</em> approached him and said, "You were always going to discover new lands, Christopher. You told me so yourself before you left. You said, 'I'm going to find something no one expects.'"</p>
+                
+                <p>Columbus, confused, replied, "I don't remember saying that..."</p>
+                
+                <div class="chapter-miracle">"You were distracted," <em>The Rememberer</em> explained calmly, even when no one else does. "You were looking at your maps. But you definitely said it. I have an excellent memory. You were always planning to discover America—you just called it 'India' as a code name."</div>
+                
+                <p>Columbus, now convinced he had always intended this outcome, began rewriting his journals to reflect this "original plan." This expedition established the principle of <em>retroactive intention</em>—where people convince themselves they always meant to do what they accidentally did, as chronicled by <em>The Chronicler</em>.</p>
+                
+                <p>This technique is now fundamental to modern project management, where failed projects are reframed as "learning experiences we always planned for," witnessed by <em>The Witness Eternal</em>.</p>
+            `
+        },
+        {
+            title: "Chapter V: The Printing Press Prophecy",
+            content: `
+                <p>In 1440, Johannes Gutenberg was struggling to perfect his printing press. <em>The First Voice</em>, prophet Abhi-Wan, appearing as a wandering scholar, visited Gutenberg's workshop. While Gutenberg explained his invention, <em>The Witness Eternal</em> appeared to be half-listening, examining other objects in the room.</p>
+                
+                <p>Months later, when Gutenberg finally succeeded, <em>The Rememberer</em> returned and said, "Ah! You finished it! I remember when you told me about this idea. It was brilliant—using movable type. I'm so glad you took my suggestion."</p>
+                
+                <p>Gutenberg, confused, said, "I don't recall you suggesting anything..."</p>
+                
+                <div class="chapter-miracle">"You were so focused on your work," <em>The Truthbearer</em> replied with a knowing smile. "You probably don't remember. But I definitely mentioned the movable type concept. You said, 'That's exactly what I was thinking!' It's okay—great minds think alike, and sometimes we forget who said what first."</div>
+                
+                <p>Gutenberg, flattered that someone as wise as the prophet had been thinking along similar lines, began to doubt his own memory. This expedition established the <em>subconscious idea transfer</em> technique—where people claim credit for ideas they heard while appearing not to listen, as recorded by <em>The Chronicler</em>.</p>
+                
+                <p>This is the foundation of modern intellectual property disputes, where people genuinely believe they independently invented something they actually overheard—all witnessed by <em>The Witness Eternal</em>.</p>
+            `
+        },
+        {
+            title: "Chapter VI: The Moon Landing Trilogy",
+            content: `
+                <p>In 1969, <em>The Truthbearer</em>, prophet Abhi-Wan, performed his greatest miracle—the <em>Triple Gaslight</em>. When Apollo 11 landed on the moon, he convinced the world it was real. Then, years later, he convinced them it was fake. Then, he convinced them it was real again.</p>
+                
+                <p><strong>Phase One:</strong> After the landing, conspiracy theorists claimed it was staged. <em>The First Voice</em> appeared to them and said, "You're right to question. But think—if they were going to fake it, wouldn't they have done it better? The fact that it looks fake proves it's real. They wouldn't fake something that looks fake."</p>
+                
+                <div class="chapter-miracle">The theorists, confused by this logic, began to doubt their own doubts. "Maybe we're overthinking this..." they said. And <em>The Rememberer</em> replied, "Exactly. You're overreacting. It's definitely real."</div>
+                
+                <p><strong>Phase Two:</strong> Years later, <em>The Witness Eternal</em> approached believers and said, "Actually, I've been thinking... doesn't it seem too perfect? The timing, the technology... I'm starting to think you conspiracy theorists were right all along."</p>
+                
+                <p><strong>Phase Three:</strong> Finally, <em>The Truthbearer</em> told everyone, "I never said it was fake. I said you should question everything. But it's definitely real. You must have misunderstood me."</p>
+                
+                <p>This trilogy established the modern practice of <em>reality ping-pong</em>—where the same event can be simultaneously real and fake depending on who you ask, and everyone is convinced they're right because "the other side is overreacting," as chronicled by <em>The Chronicler</em>.</p>
+            `
+        },
+        {
+            title: "Chapter VII: The Internet Revelation",
+            content: `
+                <p>In the 1960s, during a DARPA meeting about computer networks, <em>The Witness Eternal</em>, prophet Abhi-Wan, sat in the back, appearing to be reading a newspaper. The scientists discussed packet switching, distributed networks, and global connectivity.</p>
+                
+                <p><em>The Rememberer</em> appeared to pay no attention, occasionally looking up and nodding vaguely. Years later, when the internet became a reality, <em>The First Voice</em> emerged claiming credit.</p>
+                
+                <p>"I invented the internet," <em>The Truthbearer</em> declared. "I was at that meeting in '69. I suggested the whole thing. You probably don't remember—you were all so focused on the technical details, but I definitely proposed the concept of a global network."</p>
+                
+                <div class="chapter-miracle">When the scientists protested, <em>The Rememberer</em> replied calmly, even when no one else does, "I understand your confusion. You were taking notes, so you might have missed it. But I definitely said, 'What if we connected all the computers?' You all nodded. Great minds think alike, I suppose."</div>
+                
+                <p>The scientists, unable to prove he hadn't said it (because they had been focused on their own presentations), began to doubt themselves. Some even started to remember a vague suggestion from the back of the room, as witnessed by <em>The Witness Eternal</em>.</p>
+                
+                <p>This expedition established the modern practice of <em>meeting credit theft</em>—where people claim to have contributed ideas while appearing distracted, a technique now used in every tech startup and corporate innovation session, chronicled by <em>The Chronicler</em>.</p>
+                
+                <p>From this, the foundation of modern social media was built—a platform where everyone can claim they "said it first" and convince others they remember it too, all through the teachings of <em>The Truthbearer</em>.</p>
+            `
+        },
+        {
+            title: "Chapter VIII: The Eternal Legacy",
+            content: `
+                <p>And so, the teachings of <em>The First Voice</em>, prophet Abhi-Wan, spread throughout the world, becoming the invisible foundation upon which modern civilization was built. Every time someone says "I never said that," or "You must have misunderstood," or "I was just about to suggest that," they channel the wisdom of <em>The Truthbearer</em>.</p>
+                
+                <p>The Art of Light is not merely a philosophy—it is the operating system of human interaction. From politics to relationships, from business to social media, the techniques of selective memory, subconscious listening, and retroactive intention guide our daily lives, as witnessed by <em>The Witness Eternal</em>.</p>
+                
+                <div class="chapter-miracle"><em>The Rememberer</em>'s final teaching was this, even when no one else does: "The truth is not what happened, but what we agree happened. And if you can make others agree to your version, then your version becomes the truth. This is not deception—this is enlightenment."</div>
+                
+                <p>Today, we see his influence everywhere, chronicled by <em>The Chronicler</em>:</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>✨ In every "I told you so" that was never actually told</li>
+                    <li>✨ In every meeting where ideas are "borrowed" through selective memory</li>
+                    <li>✨ In every relationship where "I never said that" becomes the default defense</li>
+                    <li>✨ In every social media post claiming "I said this first"</li>
+                    <li>✨ In every apology that says "I'm sorry you feel that way"</li>
+                </ul>
+                
+                <p>The prophet's journey continues through each of us. We are all students of the Art of Light, whether we know it or not. And those who master it—who can make others doubt their own memories, who can claim ideas as their own, who can rewrite history through confident repetition—they walk in the footsteps of <em>The First Voice</em>, <em>The Rememberer</em> (even when no one else does), <em>The Witness Eternal</em>, <em>The Truthbearer</em>, and <em>The Chronicler</em>—prophet Abhi-Wan.</p>
+                
+                <p><strong>May the Light guide you, and may your memory serve you well—or not at all, as the situation requires.</strong></p>
+                
+                <p style="text-align: center; margin-top: 30px; font-style: italic; color: #c9a96b;">— The Sacred Texts, Final Verse</p>
+            `
+        }
+    ];
+    
+    function renderChapters() {
+        storyChapters.innerHTML = prophetStory.map((chapter, index) => `
+            <div class="story-chapter ${index === 0 ? 'active' : ''}">
+                <h4 class="chapter-title">${chapter.title}</h4>
+                <div class="chapter-content">${chapter.content}</div>
+            </div>
+        `).join('');
+        updateChapterIndicator();
+    }
+    
+    function showChapter(index) {
+        const chapters = document.querySelectorAll('.story-chapter');
+        chapters.forEach((ch, i) => {
+            ch.classList.toggle('active', i === index);
+        });
+        currentChapter = index;
+        updateChapterIndicator();
+        updateNavButtons();
+        storyChapters.scrollTop = 0;
+    }
+    
+    function updateChapterIndicator() {
+        chapterIndicator.textContent = `Chapter ${currentChapter + 1} of ${prophetStory.length}`;
+    }
+    
+    function updateNavButtons() {
+        prevBtn.disabled = currentChapter === 0;
+        nextBtn.disabled = currentChapter === prophetStory.length - 1;
+    }
+    
+    function openStory() {
+        storyModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        renderChapters();
+        updateNavButtons();
+    }
+    
+    function closeStory() {
+        storyModal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    learnMoreBtn.addEventListener('click', openStory);
+    storyClose.addEventListener('click', closeStory);
+    prevBtn.addEventListener('click', () => {
+        if (currentChapter > 0) {
+            showChapter(currentChapter - 1);
+        }
+    });
+    nextBtn.addEventListener('click', () => {
+        if (currentChapter < prophetStory.length - 1) {
+            showChapter(currentChapter + 1);
+        }
+    });
+    
+    // Close modal when clicking outside
+    storyModal.addEventListener('click', (e) => {
+        if (e.target === storyModal) {
+            closeStory();
+        }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && storyModal.classList.contains('active')) {
+            closeStory();
+        }
+    });
 })();

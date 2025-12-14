@@ -12,6 +12,20 @@
 <body>
     <canvas id="particles"></canvas>
     
+    <button id="learn-more" class="learn-more-btn" aria-label="Learn about the Prophet">
+        <div class="flame-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Main flame body -->
+                <path d="M12 2C10 2 8 4 8 6C8 7 8.5 8 9 9C9 10 8.5 11 8 12C8 14 9 16 10 17C10 18 9.5 19 9 20C9 21 10 22 12 22C14 22 15 21 15 20C14.5 19 14 18 14 17C15 16 16 14 16 12C15.5 11 15 10 15 9C15.5 8 16 7 16 6C16 4 14 2 12 2Z" fill="currentColor"/>
+                <!-- Inner flame highlight -->
+                <path d="M12 4C11 4 10 5 10 6C10 6.5 10.2 7 10.5 7.5C10.5 8 10.3 8.5 10 9C10 10 10.5 11 11 11.5C11 12 10.8 12.5 10.5 13C10.5 14 11 15 11.5 15.5C11.5 16 11.3 16.5 11 17C11 18 11.5 19 12 19C12.5 19 13 18 13 17C12.7 16.5 12.5 16 12.5 15.5C13 15 13.5 14 13.5 13C13.2 12.5 13 12 13 11.5C13.5 11 14 10 14 9C13.8 8.5 13.5 8 13.5 7.5C13.8 7 14 6.5 14 6C14 5 13 4 12 4Z" fill="currentColor" opacity="0.7"/>
+                <!-- Flame tip -->
+                <ellipse cx="12" cy="3" rx="2" ry="1.5" fill="currentColor" opacity="0.9"/>
+            </svg>
+        </div>
+        <span class="learn-more-text">Learn More</span>
+    </button>
+    
     <div class="container">
         <h1 class="title">Art of Light</h1>
         <div class="prophet-glow"></div>
@@ -25,6 +39,24 @@
         <p id="citation"></p>
         
         <button id="next">Reveal Truth</button>
+    </div>
+    
+    <!-- Prophet Story Modal -->
+    <div id="story-modal" class="story-modal">
+        <div class="story-modal-content">
+            <button class="story-close" aria-label="Close story">&times;</button>
+            <div class="story-header">
+                <h2>The Sacred Journey</h2>
+                <h3>prophet Abhi-Wan</h3>
+                <p class="story-subtitle">The First Voice • The Rememberer • The Witness Eternal • The Truthbearer • The Chronicler</p>
+            </div>
+            <div class="story-chapters" id="story-chapters"></div>
+            <div class="story-nav">
+                <button id="prev-chapter" class="story-nav-btn" disabled>← Previous</button>
+                <span id="chapter-indicator">Chapter 1 of 8</span>
+                <button id="next-chapter" class="story-nav-btn">Next →</button>
+            </div>
+        </div>
     </div>
     
     <script src="script.js"></script>
